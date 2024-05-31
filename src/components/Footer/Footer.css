@@ -1,0 +1,133 @@
+/* This ensures the body takes up the full height of the viewport */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Flex container for the entire layout */
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* This makes sure the content takes up at least the full viewport height */
+}
+
+.mainFooterWrapper {
+    background-color: #3b455a;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+
+    /* margin-bottom: 1px; */
+
+    /* position: fixed;
+    bottom: 0;
+    left: 0; */
+    /* width: 100%;  */
+    /* Take full width of the viewport */
+    z-index: 1000;
+    /* Ensure it appears above other content */
+}
+
+.mainFooterWrapper ul {
+    list-style-type: none;
+}
+.footer > li {
+    color: white;
+}
+ul li {
+    margin-top: 10px;
+}
+.color {
+    color: grey;
+}
+
+/* center the image vertically */
+.parent-div {
+    display: flex;
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    height: 120px; /* Set the height of your container */
+}
+
+img {
+    max-width: 100%; /* Optional: Ensure the image doesn't exceed the container width */
+    max-height: 100%; /* Optional: Ensure the image doesn't exceed the container height */
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center; /* This centers the icons horizontally */
+    list-style-type: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+}
+
+footer .social-icons li {
+    margin: 0 10px; /* Add some spacing between the icons */
+}
+
+.parent-div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* centers items horizontally  */
+    justify-content: center;
+}
+
+.parent-div1 .social-icons {
+    display: flex; /* Makes it a flex container */
+    list-style-type: none; /* Removes default list styles */
+    padding: 0; /* Removes default padding */
+}
+
+.parent-div1 .social-icons li {
+    margin-right: 10px; /* Adds spacing between each list item */
+}
+
+.parent-div1 .social-icons li:last-child {
+    margin-right: 0; /* Removes the margin from the last list item */
+}
+
+.social-icons a {
+    color: #fff;
+    display: inline-block;
+    width: 38px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    font-size: 16px;
+    height: 38px;
+
+    text-decoration: none;
+    transition: all 0.4s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+}
+
+.social-icons a:hover {
+    background-color: #ffffff80; /* White background with some opacity for hover effect */
+}
+
+.social-icon {
+    font-size: 24px; /* Adjust size as needed */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Define brand colors */
+.social-icons a.facebook:hover .social-icon {
+    color: #1877f2; /* Facebook blue */
+}
+
+.social-icons a.youtube:hover .social-icon {
+    color: #ff0000; /* YouTube red */
+}
+
+.social-icons a.instagram:hover .social-icon {
+    color: #8a3ab9; /* Instagram purple */
+}
